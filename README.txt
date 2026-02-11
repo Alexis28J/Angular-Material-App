@@ -71,3 +71,6 @@ Per cambiare il colore del toolbar, basta inserire una classe (ad esempio "my-to
 
 - Di nuovo su list-component.html, ho aggiunto un'immagine per ogni carta usando il tag <img> e ho usato l'url dell'immagine fornito dall'API (card.card_images[0].image_url) per mostrare l'immagine della carta.
   Poi ho stilizzato l'immagine usando CSS per farla adattare alla card.
+
+
+  COMPITO:  FARE UNA PICCOLA APP CON QUESTI PEZZI DI MATERIAL USANDO L'API GUTTENBERG + SEARCH PER CERCARE LIBRI
