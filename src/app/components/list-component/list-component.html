@@ -1,0 +1,17 @@
+<div class="container">
+@for (card of yugiServ.cards(); track $index) {
+   <mat-card class="example-card" appearance="outlined">
+  <mat-card-header>
+    <mat-card-title>{{card.name}}</mat-card-title>
+    <mat-card-subtitle>{{card.type}}</mat-card-subtitle>
+  </mat-card-header>
+  <img mat-card-image src="{{card.card_images[0].image_url}}" alt="cards">
+  <mat-card-content>
+    <p>
+    {{card.desc}}
+    </p>
+  </mat-card-content>
+</mat-card>
+
+}
+</div>
