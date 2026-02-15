@@ -59,11 +59,13 @@ Per cambiare il colore del toolbar, basta inserire una classe (ad esempio "my-to
 - Ho convertito i dati JSON dell'API in un'interfaccia TypeScript e l'ho incollato su card.ts (che ho creato manualmente dentro la cartella model).
   Ho rinominato l'interfaccia da Root a Card.
 - Su yugi-service.ts, ho creato la variabile cards di tipo Card[] e ho modificato il metodo getCards() per assegnare i risultati dell'API a questa variabile.
-  Poi ho creato un construttore per chiamare il metodo getCards() quando il servizio viene istanziato.
+  Poi ho creato un construttore per chiamare il metodo getCards() quando il servizio viene istanziato cioè quando viene creato o usato per la prima volta.
+  Istanziare un servizio significa creare un'istanza di quella classe, cioè un oggetto che rappresenta quel servizio. In Angular, i servizi vengono istanziati quando vengono iniettati in un componente o in un altro servizio. 
+  Quindi, quando usi il servizio GutenbergService in un componente (ad esempio, ListComponent), Angular crea un'istanza di GutenbergService e chiama il suo costruttore.
 
-- Su list-component.ts, ho commentato la chiamata al metodo getCards(). Non ne abbiamo bisogno più.
+- Di conseguenza, su list-component.ts, ho commentato la chiamata al metodo getBooks(). Non ne ho più bisogno.
 
-- Su list-component.html, ho creato una card per ogni carta di Yu-Gi-Oh! usando *ngFor per iterare sulla variabile cards del servizio. 
+- Su list-component.html, ho creato una card per ogni carta di Yu-Gi-Oh! usando @for per iterare sulla variabile cards del servizio. 
   Ho usato i dati delle carte (ad esempio name, type, desc) per popolare le card. Poi ho incollaro il codice del card component di Angular material per stilizzare le card.
   https://material.angular.dev/components/card/overview
 
