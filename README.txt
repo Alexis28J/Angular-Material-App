@@ -151,3 +151,15 @@ Come si può vedere si può usare un solo colore
   a cui ho aggiunto un metodo switchPalette().
 
 - Su header-component.ts, ho scritto la logica di switchPalette() percui ho creato una variabile palletteId.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+https://material.angular.dev/guide/schematics - Material Schematics
+(dashboard)
+
+(ng generate @angular/material:address-form <component-name>)
+- ng g @angular/material:dashboard /components/dashboard  -  per creare un componente dashboard
+- dopo abbiamo creato una routing su app.routes.ts  ({path: 'dashboard', component:DashboardComponent})
+  (per vedere la pagina, ricordare di scrivere /dashboard)
+
+
