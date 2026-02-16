@@ -98,9 +98,56 @@ Cioè, abbiamo creato un bottone per il dark mode e lo abbiamo collegato una fun
 
 - E finalmente su styles.scss, ho aggiunto la classe dark-body. 
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------
 https://material.angular.dev/guide/theming (Color Palettes)
 
 - Su styles.scss si può cambiare il colore delle palette (tema)
 
-ng generate @angular/material:theme-color - commando per generare una palette di colori partendo da colori che inseriamo
+- ng generate @angular/material:theme-color - commando per generare una palette di colori partendo da colori che inseriamo.
+  Poi scriviamo il colore primario della nostra palette, in formato HEX (cerchiamo in qualsiasi generatore online). Io ho scelto #fc0366
+  Poi scriviamo il colore secondario della nostra palette, sempre in formato HEX. Io ho scelto #f7b2d4
+  Abbiamo scelto 1 o 2 colori, gli altri li abbiamo lasciati stare.
+  Poi su l'opzione "Do you want to generate high contrast value override mixins for your themes?", scrivere "No"
+  Selezionare enter per il path.
+  Finalmente, scriver "Yes" per generare un scss file.
+
+- Si è creato un nuovo file chiamato "_theme-colors.scss" dove ci sono i nostri colori appena generati. 
+  Ora per usarli, ho copiato il codice e lo ho incollato nello styles.scss prima di html{}.
+  Poi su color, ho sostituito il colore primario e terziario:
+  DA: (colore azure-blue)
+      primary: mat.$azure-palette,
+      tertiary: mat.$blue-palette,
+
+  A:  (colore rosso-rosa)
+      primary: $primary-palette,
+      tertiary: $tertiary-palette,
+
+      ATTENZIONE!: Non dimenticarsi di importare 
+      @use 'sass:map';
+      @use '@angular/material' as mat;     //c'era già
+
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Nulla mi vieta di cambiare ad altre palette di colore attraverso un bottone:
+
+- Abbiamo creato, su styles.scss, le classi .charteuse-theme e .orange-theme. 
+  
+  Abbiamo usato la stessa struttura di prima 
+  @include mat.theme((
+    color: mat.$chartreuse-palette,
+    typography: Roboto,
+    density: 0,    
+  ));
+  
+Come si può vedere si può usare un solo colore
+(i colori lo abbiamo scelto dalle Prebuilt Color Palettes, sempre su https://material.angular.dev/guide/theming)
+
+- Su header-component.html, abbiamo aggiunto un altro button con icona di una palette
+
+  <button matIconButton (click)='switchPalette()'>
+   <mat-icon>palette</mat-icon>
+  </button>
+
+  a cui ho aggiunto un metodo switchPalette().
+
+- Su header-component.ts, ho scritto la logica di switchPalette() percui ho creato una variabile palletteId.
