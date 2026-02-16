@@ -8,4 +8,9 @@
   background-color: var(--mat-sys-primary);
   //var(--mat-sys-primary) è una variabile CSS che rappresenta il colore primario del tema Material Design. 
   //Utilizzando questa variabile, il colore della toolbar si adatterà automaticamente al tema scelto dall'utente, garantendo coerenza visiva in tutta l'applicazione.
+  color: aliceblue;
+}
+
+mat-icon {
+  color: aliceblue;
 }

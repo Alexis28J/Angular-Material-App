@@ -12,4 +12,13 @@
   <button  routerLink="/list" matIconButton>
     <mat-icon>list</mat-icon>
   </button>
+
+  <button matIconButton (click)="switchMode()">
+    @if (isDarkMode) {
+      <mat-icon>light_mode</mat-icon>
+    } @else {
+      <mat-icon>dark_mode</mat-icon>
+    }
+  </button>
+
 </mat-toolbar>

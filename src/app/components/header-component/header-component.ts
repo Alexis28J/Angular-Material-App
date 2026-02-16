@@ -12,4 +12,16 @@ import { RouterLink } from "@angular/router";
 })
 export class HeaderComponent {
 
+  isDarkMode = false;
+
+  switchMode(){
+  //    if (this.isDarkMode) {   // è uguale a dire this.isDarkMode === true
+  //     this.isDarkMode = false;
+  //    } else {
+  //   this.isDarkMode = true; 
+  // }
+  this.isDarkMode = !this.isDarkMode;  
+  document.body.classList.toggle('dark-body'); 
+  }
+
 }

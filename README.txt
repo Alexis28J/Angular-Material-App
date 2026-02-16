@@ -76,3 +76,31 @@ Per cambiare il colore del toolbar, basta inserire una classe (ad esempio "my-to
 
 
   COMPITO:  FARE UNA PICCOLA APP CON QUESTI PEZZI DI MATERIAL USANDO L'API GUTTENBERG + SEARCH PER CERCARE LIBRI
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+* Lunedì 16 febbraio 2026: 
+
+Theming Angular Material: https://material.angular.dev/guide/theming  (Getting Started)
+Angular Icons: https://fonts.google.com/icons 
+
+Abbiamo creato un modo scuro per la nostra pagina
+
+- Su header-component.html, abbiamo aggiunto   
+<button matIconButton (click)="switchMode()">
+    <mat-icon>dark_mode</mat-icon>
+</button>
+(l'icona dark mode lo abbiamo preso da Angular Icons)
+
+Cioè, abbiamo creato un bottone per il dark mode e lo abbiamo collegato una funzione (metodo).
+
+- Su header-component.ts, abbiamo creato il metodo switchMode() 
+
+- E finalmente su styles.scss, ho aggiunto la classe dark-body. 
+
+
+https://material.angular.dev/guide/theming (Color Palettes)
+
+- Su styles.scss si può cambiare il colore delle palette (tema)
+
+ng generate @angular/material:theme-color - commando per generare una palette di colori partendo da colori che inseriamo
